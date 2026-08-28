@@ -144,13 +144,9 @@ Assignments are due at **`11:59PM`** (midnight) on the date specified below.
 
 | **Date**    | **Day**           | **Assignment**                     |
 |:-----------:|:------------------|:-----------------------------------|
-|    09/09    |     Wednesday     | Homework № 1                       |
-|    09/16    |     Wednesday     | Homework № 2                       |
-|    09/23    |     Wednesday     | Homework № 3                       |
+|    09/16    |     Wednesday     | Homework № 1                       |
+|    09/23    |     Wednesday     | Homework № 2                       |
 |    10/02    |     Friday        | Midterm Exam                       |
-|    10/14    |     Wednesday     | Program  № 1                       |
-|    10/21    |     Wednesday     | Program  № 2                       |
-|    10/28    |     Wednesday     | Program  № 3                       |
 |    10/28    |     Wednesday     | Practicum Proposal                 |
 |    12/14    |     Wednesday     | Practicum Presentation             |
 |    12/14    |     Wednesday     | Practicum Project                  |
@@ -160,12 +156,11 @@ Assignments are due at **`11:59PM`** (midnight) on the date specified below.
 
 | Course Component        | Weighted Score |
 |:------------------------|---------------:|
-| Homeworks               |   18%          |
-| Midterm                 |   25%          |
-| Programs                |   18%          |
-| Practicum Proposal      |    9%          |
-| Practicum Presentation  |   15%          |
-| Practicum Project       |   15%          |
+| Homeworks               |   20%          |
+| Midterm                 |   30%          |
+| Practicum Proposal      |   10%          |
+| Practicum Presentation  |   20%          |
+| Practicum Project       |   20%          |
 
 
 ## Homeworks
@@ -176,11 +171,6 @@ Homework will consist of several written assignments designed to test the studen
 ## Midterm
 
 The midterm will test the studen't theoretical knowledge of process automation by proposing several scenarios and ask the student to analyze them using different theoretical techniques.
-
-
-## Programs
-
-Students will be assigned to write program which demonstrate thier ability to automate a task. The task will consist of a well specified function to be automated and will guide the student as to which technolgies and techniques should be utilized to acheive the required automation.
 
 
 ## Practicum
