@@ -1,5 +1,5 @@
 #!/bin/bash
-syllabus=CSCI-39531-Spring-2026
+syllabus=CSCI-39531-Fall-2026
 target=$syllabus.tex
 pandoc -V documentclass=book -s README.md -o $target
 sed -i 's/\\documentclass\[/\\documentclass[openany/g' $target
