@@ -119,7 +119,7 @@ The practicum should demonstrate the application of the process automation topic
 | **Mondays** | **Wednesdays** | Monday Activities | Wednesday Activities |
 |:-----------:|:--------------:|:------------------------------------------|:------------------------------------------|
 |    08/31    |     09/02      | Introduction, Syllabus      | Theory № 1   |
-|    -----    |     09/09      | |                           | Theory № 2   |
+|    -----    |     09/09      |                             | Theory № 2   |
 |    09/14    |     09/16      | Theory № 3                  | Theory № 4   |
 |    09/21    |     09/23      | Theory № 5                  | Documentation |
 |    09/28    |     -----      | Midterm Exam | |
