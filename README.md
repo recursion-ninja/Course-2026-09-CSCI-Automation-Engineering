@@ -13,7 +13,7 @@
  | **Format:**       | Online; Synchronous                                                                         |
  | **Time:**         | [Monday & Wednesday 4:00pm - 5:15pm][class-time]                                            |
  | **Office Hours:** | [Wednesday 3:00pm-4:00pm][office-time] or [by appointment][email]                           |
- | **Zoom Info:**    | [Zoom Meeting ID: `776 7332 6577` Passcode: `0xC499FA11`][zoom]                             |
+ | **Zoom Info:**    | [Zoom Meeting ID: `836 0013 7467` Passcode: `0xC39531`][zoom]                               |
  | **Course Page:**  | [github.com/recursion-ninja/Course-2026-01-CSCI-Automation-Engineering][course-page]        |
 
 [class-time        ]: https://time.is/compare/0530PM_in_New_York
@@ -21,8 +21,7 @@
 [course-page       ]: https://github.com/recursion-ninja/Course-2026-01-CSCI-Automation-Engineering
 [email             ]: mailto:teaching@recursion.ninja
 [office-time       ]: https://time.is/compare/0300PM_in_New_York
-[zoom              ]: https://us02web.zoom.us/j/77673326577?pwd=Azy90m08AsqyPNZWAReLQ4pbL3Uvzp.1
-
+[zoom              ]: https://us06web.zoom.us/j/83600137467?pwd=uAPTMXG03aid6DTTVJ0j94TIEgVcg2.1
 
 # Table of Contents
 
