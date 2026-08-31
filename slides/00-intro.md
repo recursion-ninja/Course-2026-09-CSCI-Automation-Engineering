@@ -74,4 +74,4 @@ Process automation is timeless
 
 Syllabus is `REAMDME.md`
 
-[github.com/recursion-ninja/Course-2026-01-CSCI-Automation-Engineering](https://github.com/recursion-ninja/Course-2026-01-CSCI-Automation-Engineering)
+[github.com/recursion-ninja/Course-2026-09-CSCI-Automation-Engineering](https://github.com/recursion-ninja/Course-2026-09-CSCI-Automation-Engineering)
