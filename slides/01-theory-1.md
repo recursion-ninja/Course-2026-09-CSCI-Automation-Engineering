@@ -5,11 +5,9 @@ date: 2026-01-28
 theme: "Frankfurt"
 colortheme: "beaver"
 fonttheme: "professionalfonts"
-mainfont: Font-Regular.otf
-mainfont: DejaVuSerif.ttf
-sansfont: DejaVuSans.ttf
 monofont: DejaVuSansMono.ttf
 mathfont: texgyredejavu-math.otf
+fontsize: 10pt
 ---
 
 # Automation Engineering
@@ -35,7 +33,8 @@ $$\mathtt{process} : \mathtt{input} \rightarrow \mathtt{output}$$
 | $\mathbb{Q}$ | Rational | $\lbrace \ldots, \frac{4}{3}, \frac{42}{1}, \frac{314159}{10^5}, \ldots \rbrace$ |
 | $\mathbb{R}$ | Real     | $\lbrace \ldots, \pi, e, \phi, \ldots \rbrace$ |
 
-$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$
+
+$$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$$
 
 ---
 
@@ -47,7 +46,7 @@ $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$
 
 - "Íthglir tiriel i vîr sílaí"
 
-Sometimes denoted as $\Sigma$
+Sometimes denoted as $\Sigma$ or $\Sigma^{\ast}$
 
 
 ## Logic
@@ -56,14 +55,14 @@ Sometimes denoted as $\Sigma$
 
 - $a \land b \lor \neg c$
 
-
----
-
 ## Tuples
 
 $\lparen \Sigma, \mathbb{Q} \rparen$
 
 Example value: ("Alex", 32.8)
+
+
+---
 
 ## Cases
 
@@ -75,7 +74,7 @@ Christmas = Present Toy | Coal
 
 $\mathbb{N}^{+} = Finite \quad \mathbb{N} \quad | \quad Infinity$
 
-Examples:
+## Examples:
 
 `Dinosaur : Animal`
 
@@ -87,7 +86,7 @@ Examples:
 
 # What is $\mathtt{output}$?
 
-***The same as inputs!***
+**The same as inputs!**
 
 *(Remember this)*
 
@@ -122,7 +121,6 @@ $$ \mathtt{create\_flour} = \mathtt{sieve\_flour} \circ \mathtt{grind\_flour} $$
 
 # Oops, you already learned category theory!
 
-
 ![Categorical Map](cat-map.png)
 
 ---
@@ -154,12 +152,12 @@ $$h = g \circ f$$
 
 ```
 midpoint : Rational -> Rational -> Rational
-midpoint x y  = min x y + (max x y - min x y) / 2
+midpoint(x, y)  = min x y + (max x y - min x y) / 2
 ```
 
 Evaluated:
 ```
-<<< midpoint 56.3 58.5
+<<< midpoint( 56.3, 58.5 )
 >>> 57.4
 ```
 
@@ -167,31 +165,31 @@ Evaluated:
 
 ```
 midpoint : Rational -> Rational -> Rational
-midpoint x y  = min x y + (max x y - min x y) / 2
+midpoint(x, y)  = min x y + (max x y - min x y) / 2
 ```
 
 **Types:**
 
 | Function | Type |
 |:---|:--|
-| `midpoint` | $\mathbb{Q} \rightarrow \mathbb{Q} \rightarrow \mathbb{Q}$ |
-| `midpoint 56.3`  |$\mathbb{Q} \rightarrow \mathbb{Q}$ |
-| `midpoint 56.3 58.5` | $\mathbb{Q}$ |
+| `midpoint()` | $\mathbb{Q} \rightarrow \mathbb{Q} \rightarrow \mathbb{Q}$ |
+| `midpoint( 56.3 )`  |$\mathbb{Q} \rightarrow \mathbb{Q}$ |
+| `midpoint( 56.3, 58.5 )` | $\mathbb{Q}$ |
 
 ---
 
 ```
 midpoint : Rational -> Rational -> Rational
-midpoint x y  = min x y + (max x y - min x y) / 2
+midpoint(x, y) = min x y + (max x y - min x y) / 2
 ```
 
 **Values**
 
-1. `midpoint`
+1. `midpoint()`
     - `x y -> min x  y  + (max x  y  - min x  y ) / 2`
-2. `midpoint 56`
+2. `midpoint(56)`
     - `. y -> min 56 y  + (max 56 y  - min 56 y ) / 2`
-3. `midpoint 56 58`
+3. `midpoint(56, 58)`
     - `.      min 56 58 + (max 56 58 - min 56 58) / 2`
 
 
@@ -220,7 +218,7 @@ sort compare xs = merge compare sortedL sortedR
 
 ## Processes are Functions
 
-- Break you process down into small conceptual units
+- Break your process down into small, conceptual units
 
 - Model the conceptual units as functions over inputs and outputs
 

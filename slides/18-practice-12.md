@@ -5,9 +5,6 @@ date: 2026-04-22
 theme: "Frankfurt"
 colortheme: "beaver"
 fonttheme: "professionalfonts"
-mainfont: Font-Regular.otf
-mainfont: DejaVuSerif.ttf
-sansfont: DejaVuSans.ttf
 monofont: DejaVuSansMono.ttf
 mathfont: texgyredejavu-math.otf
 aspectratio: 169

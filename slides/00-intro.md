@@ -1,15 +1,18 @@
 ---
-theme: "Frankfurt"
-date: 2026-01-26
+title: Lecture 0
+subtitle: "Introduction"
+date: 2026-08-31
 theme: "Frankfurt"
 colortheme: "beaver"
 fonttheme: "professionalfonts"
-mainfont: Font-Regular.otf
-mainfont: DejaVuSerif.ttf
-sansfont: DejaVuSans.ttf
 monofont: DejaVuSansMono.ttf
 mathfont: texgyredejavu-math.otf
+aspectratio: 169
+header-includes:
+ - \usepackage{tikz}
+ - \usetikzlibrary{arrows.meta,positioning,shapes,fit}
 ---
+
 
 # Welcome
 

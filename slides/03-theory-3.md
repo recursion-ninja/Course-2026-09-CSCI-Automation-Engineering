@@ -5,9 +5,6 @@ date: 2026-02-04
 theme: "Frankfurt"
 colortheme: "beaver"
 fonttheme: "professionalfonts"
-mainfont: Font-Regular.otf
-mainfont: DejaVuSerif.ttf
-sansfont: DejaVuSans.ttf
 monofont: DejaVuSansMono.ttf
 mathfont: texgyredejavu-math.otf
 header-includes: |
@@ -54,6 +51,8 @@ A **Fold** takes:
 - a rule for combining one value with an accumulated result
 
 - turns the whole collection into one final value
+
+**Fold** is sometimes called "Reduce" in some languages/contexts.
 
 ---
 
