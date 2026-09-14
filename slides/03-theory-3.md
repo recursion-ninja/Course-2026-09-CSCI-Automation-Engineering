@@ -91,6 +91,8 @@ step x acc = x + acc
 
 # Abstracting Folds
 
+
+
 # Constraint classes: `Foldable`
 
 ## Foldable
@@ -210,7 +212,12 @@ $$\mathtt{String} \rightarrow \mathtt{WordFrequencies}$$
 ```
 wordFrequencies :: String → WordFrequencies
 wordFrequencies(str) =
-    fold step Map.empty ○ words ○ normalize str
+    fold collect Map.empty ○ sort ○ words ○ normalize str
+      where
+        collect :: String → WordFrequencies → WordFrequencies
+        collect str freqMap = case str `lookup` freqMap of
+          None   -> Map.insert str      1  freqMap
+          Some n -> Map.adjust str (add 1) freqMap
 ```
 
 ---
@@ -246,7 +253,7 @@ longest(list_list) =
 
 ---
 
-# *What can we implement for *any* `Foldable`?
+# What can we implement for *any* `Foldable`?
 
 | Name |Type |
 |:---|:----|
