@@ -1,7 +1,7 @@
 ---
 title: Lecture 4
 subtitle: Data Transformations
-date: 2026-02-09
+date: 2026-09-16
 theme: "Frankfurt"
 colortheme: "beaver"
 fonttheme: "professionalfonts"
@@ -88,6 +88,8 @@ A **Finite State Machine (FSM)**:
 - Only legal transitions allowed
 
 FSMs model *processes*.
+
+_Also called Deterministic Finite Automata (DFA)._
 
 ---
 
@@ -582,6 +584,24 @@ $$\delta\Parens{\mathtt{New},\, \mathtt{ship}} = \bot$$
 - Well-studied $\implies$ lots of academic papers
 
 - Well-developed $\implies$ lots of libraries
+
+---
+
+# How to learn any individual FSMs?
+
+_Learning Regular Sets from Querries and Counterexamples_
+
+- Dana Agluin, 1987
+
+The $L^{\ast}$ algorithm has a student (you) ask a teacher (someone else) a series of questions.
+
+> Is this string in the language?
+
+> Is this FSM the language you are teaching?
+
+When the student is correct, the teacher acknowledges correctness and the learning prcoess ends.
+
+When the student is wrong, the teacher provides a counterexample string.
 
 ---
 
