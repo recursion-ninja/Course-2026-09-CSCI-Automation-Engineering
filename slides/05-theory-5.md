@@ -1,7 +1,7 @@
 ---
 title: Lecture 5
 subtitle: Streams, Pipes, Backpressure, and Theory
-date: 2026-02-11
+date: 2026-09-23
 theme: "Frankfurt"
 colortheme: "beaver"
 fonttheme: "professionalfonts"
@@ -126,17 +126,17 @@ Execution is demand-driven.
 
 # Category-Theoretic View
 
-A pipe is morally:
+A **pipe** is morally:
 
-A morphism from stream A to stream B.
+A morphism from $\texttt{Stream}\;\,a$ to $\texttt{Stream}\;\,b$.
 
 But streaming is effectful, so more precisely:
 
-Pipe a b ~ a morphism in a category enriched over effects.
+`Pipe a b` $\equiv$ a morphism in a category enriched over effects.
 
 Composition:
 
-Pipe a b $\circ$ Pipe b c = Pipe a c
+`Pipe a b` $\circ$ `Pipe b c` $=$ `Pipe a c`
 
 Associativity holds.
 
@@ -151,8 +151,8 @@ Morphisms: Pipes transforming them
 
 Properties:
 
-- Identity: yield
-- Composition: (>->) or (.|)
+- Identity: `yield`
+- Composition: `>->` or `.|` or $\oplus$
 - Associativity: guaranteed by library laws
 
 Thus, streaming stages compose categorically.
@@ -163,8 +163,9 @@ Thus, streaming stages compose categorically.
 
 We can think of:
 
-Producer a  ~  free monad generating a stream
-Consumer a  ~  fold over a stream
+`Producer a` $\equiv$  free monad generating a stream
+
+`Consumer a` $\equiv$  fold over a stream
 
 There is a duality:
 
@@ -189,7 +190,7 @@ A streaming consumer is essentially:
 In conduit:
 
 ~~~haskell
-sinkList :: ConduitT a o m [a]
+sinkList :: ConduitT i o e [a]
 ~~~
 
 is a fold into a list.
@@ -204,11 +205,11 @@ An algebra for the list functor.
 
 List functor:
 
-F X = 1 + A × X
+$\mathcal{F} X = 1 + A × X$
 
 An algebra:
 
-F B -> B
+$\mathcal{F} X -> B$
 
 Streaming evaluates this algebra incrementally.
 
@@ -222,13 +223,14 @@ A stream producer corresponds to:
 
 A coalgebra:
 
-X -> F X
+$X \to \mathcal{F} X$
 
 It unfolds values over time.
 
 Thus:
 
 Producer = Coalgebra
+
 Consumer = Algebra
 
 Streaming connects them.
@@ -306,20 +308,22 @@ Streaming libraries unify:
 
 # Conceptual Diagram
 
+$$
+\textbf{Unfold} \to \textit{Transform} \to \texttt{Fold}
+$$
+
 \begin{center}
 \begin{tikzpicture}[>=Stealth, node distance=2cm]
 
-  \node (coalgebra) [draw, rectangle] {Producer (Coalgebra)};
-  \node (pipe) [draw, rectangle, right=of coalgebra] {Pipe (Morphism)};
-  \node (algebra) [draw, rectangle, right=of pipe] {Consumer (Algebra)};
+  \node (coalgebra) [draw, rectangle] {\textbf{Producer} (Coalgebra)};
+  \node (pipe) [draw, rectangle, below right=1cm and 0.5cm of coalgebra] {\textit{Pipe} (Morphism)};
+  \node (algebra) [draw, rectangle, above right=1cm and 0.5cm of pipe] {\texttt{Consumer} (Algebra)};
 
   \draw[->] (coalgebra) -- (pipe);
   \draw[->] (pipe) -- (algebra);
 
 \end{tikzpicture}
 \end{center}
-
-Unfold → Transform → Fold
 
 ---
 

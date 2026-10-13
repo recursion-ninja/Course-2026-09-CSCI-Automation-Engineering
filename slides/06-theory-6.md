@@ -1,7 +1,7 @@
 ---
 title: Lecture 6
 subtitle: Descriptive, Definative Documentation
-date: 2026-02-23
+date: 2026-10-07
 theme: "Frankfurt"
 colortheme: "beaver"
 fonttheme: "professionalfonts"
@@ -22,7 +22,7 @@ mathfont: texgyredejavu-math.otf
 # What Goes Wrong Without Documentation?
 
 - Hidden assumptions
-- Tribal knowledge
+- Tribal/Institutional knowledge
 - Fragile systems
 - Expensive outages
 - Compliance violations
@@ -348,12 +348,17 @@ Clarifies accountability.
 
 Precise statements:
 
-- "Payment must be confirmed before shipment."
-- "All employees must have an email account."
+  - "Payment must be confirmed before shipment."
+  - "All employees must have an email account."
 
-Avoid vague language.
+Avoid vague language. Consider using _Controlled Natural Language._
+
+ - RFC 2119 from The Internet Engineering Taskforce
+ - Attempto Controlled English dialect
 
 Define all domain knowledge terminology used.
+
+ - Use a glossary or appendix if necessary.
 
 ---
 
@@ -458,6 +463,7 @@ Define behavior for:
 - Service outages
 - Data inconsistencies
 - Partial failures
+- Recovery modes
 
 Never leave failure undefined.
 
@@ -496,6 +502,8 @@ Avoid:
 
 # Documentation for Technical Users
 
+Sections 4 to 10.
+
 Focus on:
 
 - State definitions
@@ -505,6 +513,12 @@ Focus on:
 - Performance constraints
 
 Be precise and unambiguous.
+
+---
+
+# Documentation for Technical Users
+
+Avoid excessive prose, terse is usually better than verbose. Surprisingly, using too many words to describe a technical detail can be counterproductive. This is because **technical users need to find the answer quickly,** so that they can solve the problem at hand, and move on to the next problem to be solved. Consequently, it would be a bad idea to hide important information in the middle of a large paragraph. That is why, for example, on my lecture slides, I always keep my text terse. This allows my students to quickly find the referece they were looking for when referring back to the slides.
 
 ---
 
@@ -535,11 +549,13 @@ Well-documented automation:
 
 Business rules evolve.
 
-With structured documentation:
+With well-structured documentation:
 
 - Impact analysis is easier
 - Changes are localized
 - Regression risk is reduced
+
+_Updating documentation is easier when every piece of information has a place!_
 
 ---
 

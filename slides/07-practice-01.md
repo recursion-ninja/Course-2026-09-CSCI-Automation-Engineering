@@ -1,7 +1,7 @@
 ---
 title: Lecture 07
 subtitle: Computerized Process Automation with Human Input Devices
-date: 2026-03-02
+date: 2026-10-13
 theme: "Frankfurt"
 colortheme: "beaver"
 fonttheme: "professionalfonts"

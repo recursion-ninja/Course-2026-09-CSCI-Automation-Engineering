@@ -122,15 +122,15 @@ The practicum should demonstrate the application of the process automation topic
 |    09/14    |     09/16      | Theory № 3                  | Theory № 4   |
 |    -----    |     09/23      |                   | Theory № 5 |
 |    09/28    |     -----      | Midterm Exam | |
-|    10/05    |     10/07      | Data Input (CLI & GUI)      | Data transformation |
-|    10/13†   |     10/14      | Subscription Processing     | Web APIs (REST)         |
-|    10/19    |     10/21      | Web Scraping                | Web Submissions |
-|    10/26    |     10/28      | Web Debugging/Fuzzing/Probing | Processes (Sniping)  |
-|    11/02    |     11/04      | Processes (Bots) | Daemonization |
-|    11/09    |     11/11      | Practicum Presentations № 1 | Debugging & Logging |
-|    11/16    |     11/18      | Practicum Presentations № 2 | Designing Workflows |
-|    11/23    |     -----      | Practicum Presentations № 3 | Documentation |
-|    11/30    |     12/02      | Practicum Presentations № 4 | Special Topics |
+|    10/05    |     10/07      | _Power Outage_ | Documentation |
+|    10/13†   |     10/14      | Data Input (CLI & GUI)      | Data transformation |
+|    10/19    |     10/21      | Subscription Processing     | Web APIs (REST)         |
+|    10/26    |     10/28      | Web Scraping                | Web Submissions |
+|    11/02    |     11/04      | Web Debugging/Fuzzing/Probing | Processes (Sniping)  |
+|    11/09    |     11/11      | Practicum Presentations № 1 | Processes (Bots) |
+|    11/16    |     11/18      | Practicum Presentations № 2 | Daemonization |
+|    11/23    |     -----      | Practicum Presentations № 3 | Debugging & Logging |
+|    11/30    |     12/02      | Practicum Presentations № 4 | Designing Workflows |
 |    12/07    |     12/09      | Practicum Presentations № 5 | Practicum Presentations № 6 |
 |    12/14    |     -----      | Practicum Presentations № 7 | |
 
