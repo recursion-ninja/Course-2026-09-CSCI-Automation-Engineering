@@ -259,9 +259,9 @@ Automation operates on trusted structure.
 \node (report) [draw, below of=grouped] {Company Report};
 
 \path (raw) -- coordinate[pos=0.6] (parsing-center) (parsed);
-\node[draw, circle, fill=white, font=\footnotesize, inner sep=1pt, outer sep=0pt] (parsing) at (parsing-center) {Parsing};
-\draw[thick] ([yshift=-0.5cm]raw.south) -- (parsing.north);
-\draw[->, thick] (parsing.south) -- ([yshift=0.5cm]parsed.north);
+\node[draw, circle, fill=white, font=\footnotesize, inner sep=3pt, outer sep=0pt] (parsing) at (parsing-center) {Parsing};
+\draw[->, thick] (raw.south) -- (parsing.north);
+\draw[->, thick] (parsing.south) -- (parsed.north);
 \draw[->] (parsed) -- (grouped);
 \draw[->] (grouped) -- (report);
 \draw[dashed] (current bounding box.west |- parsing.center) -- (parsing.west);
@@ -279,10 +279,10 @@ We will use the following fold:
 
 ```haskell
 fold : Foldable f
-     => (a -> b -> b)
-     -> b
-     -> f a
-     -> b
+     => (a -> b -> b) -- The accumulation function
+     -> b             -- The starting accumulator (seed)
+     -> f a           -- The collection to be folded over
+     -> b             -- The final accumulator
 ```
 
 A fold:
