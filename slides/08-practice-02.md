@@ -1,7 +1,7 @@
 ---
 title: Lecture 08
 subtitle: Data Transformations
-date: 2026-03-04
+date: 2026-10-14
 theme: "Frankfurt"
 colortheme: "beaver"
 fonttheme: "professionalfonts"
@@ -181,12 +181,36 @@ data Expense = Expense
 
 ---
 
+# Strong Error Modeling
+
+$$
+\mathtt{Either}\; \alpha \; \beta \;= \begin{cases}
+\;\mathtt{Left}\;\phantom{\mathtt{t}} \alpha\\
+\;\mathtt{Right}\; \beta\\
+\end{cases}
+$$
+
+
+The $\mathtt{Either}$ type represents values with two possibilities
+
+  1. $\mathtt{Left}\;\phantom{\mathtt{t}} \alpha$
+  2. $\mathtt{Right}\; \beta$
+
+The $\mathtt{Either}$ type is often used to represent a value which is
+either correct or an error; by convention, the $\mathtt{Left}$ constructor is
+used to hold an error value and the $\mathtt{Right}$ constructor is used to
+hold a correct value.
+
+_mnemonic: \"right\" also means \"correct\"_
+
+---
+
 # Parse, Don’t Validate
 
 Instead of:
 
 ```haskell
-validate : RawExpense -> Either Error Expense
+validate : RawExpense -> Optional Expense
 ```
 
 We do:
@@ -230,13 +254,18 @@ Automation operates on trusted structure.
 
 \begin{tikzpicture}[node distance=2cm, outer sep=0.5cm, auto]
 \node (raw) [draw] {Raw Text};
-\node (parsed) [draw, below of=raw] {Parsed Domain Values};
+\node (parsed) [draw, below=1.4cm of raw] {Parsed Domain Values};
 \node (grouped) [draw, right=1.5cm of parsed] {Grouped Structure};
 \node (report) [draw, below of=grouped] {Company Report};
 
-\draw[->] (raw) -- (parsed);
+\path (raw) -- coordinate[pos=0.6] (parsing-center) (parsed);
+\node[draw, circle, fill=white, font=\footnotesize, inner sep=1pt, outer sep=0pt] (parsing) at (parsing-center) {Parsing};
+\draw[thick] ([yshift=-0.5cm]raw.south) -- (parsing.north);
+\draw[->, thick] (parsing.south) -- ([yshift=0.5cm]parsed.north);
 \draw[->] (parsed) -- (grouped);
 \draw[->] (grouped) -- (report);
+\draw[dashed] (current bounding box.west |- parsing.center) -- (parsing.west);
+\draw[dashed] (parsing.east) -- (current bounding box.east |- parsing.center);
 \end{tikzpicture}
 
 
